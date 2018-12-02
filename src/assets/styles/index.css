@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.app {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+}
+
+.header {
+    flex: 0;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+}
+
+.main .left-sidebar {
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+    background-color: blue;
+    justify-content: flex-start;
+}
+
+.left-sidebar a {
+    padding: 10px;
+}
+
+.main .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex: 7 1;
+    background-color: skyblue;
+}
+
+.footer {
+    flex: 0;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-div {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loader {
+    position: fixed;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid skyblue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input.error {
+    border: 1px;
+    border-color: red;
+}
